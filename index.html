@@ -1818,7 +1818,7 @@
             btn.disabled = true;
 
             try {
-                const response = await fetch(`${API_BASE_URL}/registerDevice`, {
+                const response = await fetch(`${STUDIOOS_API_URL}/registerDevice`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ deviceId, verified: true }) // Android would set verified=true after biometric
@@ -1877,7 +1877,7 @@
             btn.disabled = true;
 
             try {
-                const response = await fetch(`${API_BASE_URL}/verifyDevice`, {
+                const response = await fetch(`${STUDIOOS_API_URL}/verifyDevice`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ clientId: deviceId })
